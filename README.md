@@ -13,6 +13,25 @@ git clone <this-repo> claude-x && cd claude-x && ./install.sh
 Re-running is safe: existing files are backed up (`*.bak-<timestamp>`) and MCP
 server entries already present in `~/.claude.json` are never overwritten.
 
+## Update (no reinstall)
+
+```bash
+cd claude-x && ./update.sh
+```
+
+Pulls the latest repo state and applies **only the deltas**:
+
+- files are compared byte-for-byte; only changed ones are copied (with a
+  timestamped backup of what they replace) — unchanged files are untouched
+- `npm ci` for the vendored aseprite server runs only if its lockfile changed
+- MCP merge is add-only — entries already in `~/.claude.json` (your real
+  secrets) are never overwritten
+- marketplaces/plugins are only added, never reinstalled
+- prints `Already up to date — nothing changed.` when there is nothing to do
+
+`./update.sh --no-pull` applies the current checkout without fetching (offline,
+or when testing local edits before committing).
+
 ## What gets installed
 
 | Repo path | Installs to | Contents |
