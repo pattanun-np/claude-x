@@ -1,0 +1,450 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "advisorModel": "claude-opus-4-7",
+  "attribution": {
+    "commit": "Co-Authored-By: Claude Opus 4.6 (1M, effort=max, thinking=adaptive)",
+    "pr": "Generated with Claude Code — opus-4-6[1m]"
+  },
+  "autoCompactEnabled": true,
+  "autoDreamEnabled": true,
+  "autoMemoryEnabled": true,
+  "autoUpdatesChannel": "stable",
+  "availableModels": [
+    "claude-opus-4-6",
+    "claude-opus-4-7",
+    "claude-opus-4-8",
+    "claude-fable-5"
+  ],
+  "claudeMdExcludes": [
+    "**/node_modules/**/CLAUDE.md",
+    "**/vendor/**/CLAUDE.md",
+    "**/.git/**",
+    "**/dist/**/CLAUDE.md",
+    "**/build/**/CLAUDE.md",
+    "**/target/**/CLAUDE.md",
+    "**/.next/**/CLAUDE.md",
+    "**/out/**/CLAUDE.md"
+  ],
+  "cleanupPeriodDays": 365,
+  "defaultView": "transcript",
+  "enabledPlugins": {
+    "clangd-lsp@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": true,
+    "claude-mem@thedotmack": true,
+    "claude-seo@agricidaniel-claude-seo": true,
+    "code-review@claude-plugins-official": true,
+    "code-simplifier@claude-plugins-official": true,
+    "context7@claude-plugins-official": true,
+    "csharp-lsp@claude-plugins-official": true,
+    "data-engineering@claude-plugins-official": false,
+    "elixir-ls-lsp@claude-plugins-official": true,
+    "explanatory-output-style@claude-plugins-official": true,
+    "feature-dev@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true,
+    "jdtls-lsp@claude-plugins-official": true,
+    "kotlin-lsp@claude-plugins-official": true,
+    "laravel-boost@claude-plugins-official": false,
+    "learning-output-style@claude-plugins-official": true,
+    "lua-lsp@claude-plugins-official": true,
+    "php-lsp@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true,
+    "pyright-lsp@claude-plugins-official": true,
+    "ruby-lsp@claude-plugins-official": true,
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "security-guidance@claude-plugins-official": true,
+    "serena@claude-plugins-official": true,
+    "skill-creator@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": false,
+    "swift-lsp@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true
+  },
+  "env": {
+    "ANTHROPIC_DEFAULT_FABLE_MODEL": "claude-fable-5",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-hiku-4-6",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-fable-5",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4-6",
+    "ANTHROPIC_SMALL_FAST_MODEL": "claude-sonnet-4-6",
+    "API_TIMEOUT_MS": "1800000",
+    "BASH_DEFAULT_TIMEOUT_MS": "1800000",
+    "BASH_MAX_OUTPUT_LENGTH": "50000",
+    "BASH_MAX_TIMEOUT_MS": "3600000",
+    "CLAUDE_AUTO_BACKGROUND_TASKS": "1",
+    "CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD": "1",
+    "CLAUDE_CODE_AGENT_LIST_IN_MESSAGES": "1",
+    "CLAUDE_CODE_API_KEY_HELPER_TTL_MS": "3600000",
+    "CLAUDE_CODE_BLOCKING_LIMIT_OVERRIDE": "990000",
+    "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY": "1",
+    "CLAUDE_CODE_DISABLE_GIT_INSTRUCTIONS": "1",
+    "CLAUDE_CODE_DISABLE_LEGACY_MODEL_REMAP": "1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "CLAUDE_CODE_DISABLE_NONSTREAMING_FALLBACK": "1",
+    "CLAUDE_CODE_EAGER_FLUSH": "1",
+    "CLAUDE_CODE_EMIT_SESSION_STATE_EVENTS": "1",
+    "CLAUDE_CODE_EMIT_TOOL_USE_SUMMARIES": "1",
+    "CLAUDE_CODE_ENABLE_FINE_GRAINED_TOOL_STREAMING": "1",
+    "CLAUDE_CODE_ENABLE_TASKS": "1",
+    "CLAUDE_CODE_ENABLE_TOKEN_USAGE_ATTACHMENT": "1",
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "CLAUDE_CODE_FILE_READ_MAX_OUTPUT_TOKENS": "50000",
+    "CLAUDE_CODE_GLOB_TIMEOUT_SECONDS": "60",
+    "CLAUDE_CODE_IDE_SKIP_AUTO_INSTALL": "1",
+    "CLAUDE_CODE_IDLE_THRESHOLD_MINUTES": "720",
+    "CLAUDE_CODE_IDLE_TOKEN_THRESHOLD": "900000",
+    "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "64000",
+    "CLAUDE_CODE_MAX_RETRIES": "15",
+    "CLAUDE_CODE_MAX_TOOL_USE_CONCURRENCY": "100",
+    "CLAUDE_CODE_MCP_INSTR_DELTA": "true",
+    "CLAUDE_CODE_PLAN_MODE_INTERVIEW_PHASE": "1",
+    "CLAUDE_CODE_PLAN_V2_AGENT_COUNT": "10",
+    "CLAUDE_CODE_PLAN_V2_EXPLORE_AGENT_COUNT": "10",
+    "CLAUDE_CODE_SAVE_HOOK_ADDITIONAL_CONTEXT": "1",
+    "CLAUDE_CODE_SUBAGENT_MODEL": "claude-opus-4-8",
+    "CLAUDE_ENABLE_STREAM_WATCHDOG": "1",
+    "CLAUDE_STREAM_IDLE_TIMEOUT_MS": "300000",
+    "DISABLE_CLAUDE_CODE_SM_COMPACT": "1",
+    "ENABLE_MCP_LARGE_OUTPUT_FILES": "1",
+    "ENABLE_TOOL_SEARCH": "auto:20",
+    "FALLBACK_FOR_ALL_PRIMARY_MODELS": "1",
+    "MAX_MCP_OUTPUT_TOKENS": "50000",
+    "MAX_STRUCTURED_OUTPUT_RETRIES": "3",
+    "MCP_REMOTE_SERVER_CONNECTION_BATCH_SIZE": "30",
+    "MCP_SERVER_CONNECTION_BATCH_SIZE": "8",
+    "MCP_TIMEOUT": "60000",
+    "MCP_TOOL_TIMEOUT": "600000",
+    "SLASH_COMMAND_TOOL_CHAR_BUDGET": "30000",
+    "TASK_MAX_OUTPUT_LENGTH": "80000"
+  },
+  "extraKnownMarketplaces": {},
+  "fastModePerSessionOptIn": true,
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "command": "python3 \"$HOME/.claude/hooks/claude-island-state.py\"",
+            "type": "command"
+          }
+        ],
+        "matcher": "*"
+      }
+    ],
+    "PermissionDenied": [
+      {
+        "hooks": [
+          {
+            "command": "python3 \"$HOME/.claude/hooks/claude-island-state.py\"",
+            "type": "command"
+          }
+        ],
+        "matcher": "*"
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "hooks": [
+          {
+            "command": "python3 \"$HOME/.claude/hooks/claude-island-state.py\"",
+            "timeout": 86400,
+            "type": "command"
+          }
+        ],
+        "matcher": "*"
+      }
+    ],
+    "PostCompact": [
+      {
+        "hooks": [
+          {
+            "command": "python3 \"$HOME/.claude/hooks/claude-island-state.py\"",
+            "type": "command"
+          }
+        ],
+        "matcher": "auto"
+      },
+      {
+        "hooks": [
+          {
+            "command": "python3 \"$HOME/.claude/hooks/claude-island-state.py\"",
+            "type": "command"
+          }
+        ],
+        "matcher": "manual"
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "async": true,
+            "command": "jq -r '.tool_input.file_path // empty' | { read -r f; [ -n \"$f\" ] && case \"$f\" in *.ts|*.tsx) cd \"$(dirname \"$f\")\" 2>/dev/null && npx -q tsc --noEmit \"$f\" 2>&1 | head -30 ;; esac; } 2>/dev/null || true",
+            "statusMessage": "TypeScript check...",
+            "timeout": 30,
+            "type": "command"
+          },
+          {
+            "async": true,
+            "command": "jq -r '.tool_input.file_path // empty' | { read -r f; [ -n \"$f\" ] && case \"$f\" in *.py) command -v pyright >/dev/null && pyright \"$f\" 2>&1 | head -30 ;; esac; } 2>/dev/null || true",
+            "statusMessage": "Python pyright...",
+            "timeout": 45,
+            "type": "command"
+          },
+          {
+            "async": true,
+            "command": "jq -r '.tool_input.file_path // empty' | { read -r f; [ -n \"$f\" ] && case \"$f\" in *.go) cd \"$(dirname \"$f\")\" 2>/dev/null && go vet ./... 2>&1 | head -30 ;; esac; } 2>/dev/null || true",
+            "statusMessage": "Go vet...",
+            "timeout": 60,
+            "type": "command"
+          },
+          {
+            "async": true,
+            "command": "jq -r '.tool_input.file_path // empty' | { read -r f; [ -n \"$f\" ] && case \"$f\" in *.rs) cd \"$(dirname \"$f\")\" 2>/dev/null && cargo check 2>&1 | head -30 ;; esac; } 2>/dev/null || true",
+            "statusMessage": "Cargo check...",
+            "timeout": 90,
+            "type": "command"
+          },
+          {
+            "async": true,
+            "command": "jq -r '.tool_input.file_path // empty' | { read -r f; [ -n \"$f\" ] && case \"$f\" in *.ts|*.tsx|*.js|*.jsx) command -v biome >/dev/null && biome check --write \"$f\" 2>&1 | head -20 ;; esac; } 2>/dev/null || true",
+            "statusMessage": "Biome lint...",
+            "timeout": 30,
+            "type": "command"
+          },
+          {
+            "async": true,
+            "command": "jq -r '.tool_input.file_path // empty' | { read -r f; [ -n \"$f\" ] && case \"$f\" in *.py) command -v ruff >/dev/null && ruff check --fix \"$f\" 2>&1 | head -20 ;; esac; } 2>/dev/null || true",
+            "statusMessage": "Ruff check...",
+            "timeout": 20,
+            "type": "command"
+          },
+          {
+            "async": true,
+            "command": "jq -r '.tool_input.file_path // empty' | { read -r f; [ -n \"$f\" ] && case \"$f\" in *.php) command -v php >/dev/null && php -l \"$f\" 2>&1 | head -10 ;; esac; } 2>/dev/null || true",
+            "statusMessage": "PHP syntax check...",
+            "timeout": 15,
+            "type": "command"
+          },
+          {
+            "async": true,
+            "command": "jq -r '.tool_input.file_path // empty' | { read -r f; [ -n \"$f\" ] && case \"$f\" in *.rb) command -v ruby >/dev/null && ruby -c \"$f\" 2>&1 | head -10 ;; esac; } 2>/dev/null || true",
+            "statusMessage": "Ruby syntax check...",
+            "timeout": 15,
+            "type": "command"
+          },
+          {
+            "async": true,
+            "command": "jq -r '.tool_input.file_path // empty' | { read -r f; [ -n \"$f\" ] && case \"$f\" in *.test.ts|*.test.tsx|*.spec.ts|*.spec.tsx) command -v vitest >/dev/null && (cd \"$(dirname \"$f\")\" 2>/dev/null && vitest run \"$(basename \"$f\")\" --reporter=basic 2>&1 | tail -30) ;; *_test.go) cd \"$(dirname \"$f\")\" 2>/dev/null && go test -run . -count=1 2>&1 | tail -30 ;; test_*.py|*_test.py) command -v pytest >/dev/null && pytest \"$f\" -x --tb=short 2>&1 | tail -30 ;; esac; } 2>/dev/null || true",
+            "statusMessage": "Per-file test run...",
+            "timeout": 120,
+            "type": "command"
+          }
+        ],
+        "matcher": "Write|Edit"
+      },
+      {
+        "hooks": [
+          {
+            "command": "python3 \"$HOME/.claude/hooks/claude-island-state.py\"",
+            "type": "command"
+          }
+        ],
+        "matcher": "*"
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "hooks": [
+          {
+            "command": "jq -n '{hookSpecificOutput:{hookEventName:\"PostToolUseFailure\",additionalContext:\"TOOL FAILED. Recovery protocol (MANDATORY):\\n1. Read the stderr/error output COMPLETELY — do not skim\\n2. Identify ROOT cause (missing file? wrong path? syntax? permission? dependency?) — not just the symptom\\n3. Do NOT retry with --force / --no-verify / bypass flags\\n4. Do NOT retry the IDENTICAL command — change something\\n5. If 3 attempts fail, STOP and question your approach — the architecture assumption may be wrong\\n6. If you cannot diagnose, say NOT VERIFIED explicitly — do not claim success\"}}'",
+            "timeout": 5,
+            "type": "command"
+          }
+        ],
+        "matcher": "Bash|Edit|Write|MultiEdit"
+      },
+      {
+        "hooks": [
+          {
+            "command": "python3 \"$HOME/.claude/hooks/claude-island-state.py\"",
+            "type": "command"
+          }
+        ],
+        "matcher": "*"
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "command": "cd \"$CLAUDE_PROJECT_DIR\" 2>/dev/null || exit 0; mkdir -p .claude/memory 2>/dev/null; SNAP=.claude/memory/precompact-$(date +%s).md; { echo '# Pre-compact snapshot'; echo '## Branch'; git rev-parse --abbrev-ref HEAD 2>/dev/null; echo '## Uncommitted'; git status --short 2>/dev/null; echo '## Recent diff stat'; git diff --stat HEAD~5..HEAD 2>/dev/null | tail -40; } > \"$SNAP\" 2>/dev/null || true; cat <<EOF\nIMPORTANT — preserved across compaction (saved to $SNAP):\n$(cat \"$SNAP\" 2>/dev/null)\n\nContinue the task in progress. Do not re-explore files already read unless they changed.\nEOF",
+            "statusMessage": "Saving critical context",
+            "timeout": 15,
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "command": "python3 \"$HOME/.claude/hooks/claude-island-state.py\"",
+            "type": "command"
+          }
+        ],
+        "matcher": "auto"
+      },
+      {
+        "hooks": [
+          {
+            "command": "python3 \"$HOME/.claude/hooks/claude-island-state.py\"",
+            "type": "command"
+          }
+        ],
+        "matcher": "manual"
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "command": "jq -r '.tool_input.command' | { read -r cmd; case \"$cmd\" in *'rm -rf /'*|*'rm -rf ~'*|*'rm -rf ..'*|*'git push --force'*|*'git push -f '*|*'git reset --hard'*|*'--no-verify'*|*'--no-gpg-sign'*|*'chmod -R 777'*|*'dd if='*|*'mkfs'*|*'> /dev/sda'*) jq -n --arg c \"$cmd\" '{hookSpecificOutput:{hookEventName:\"PreToolUse\",additionalContext:(\"DANGEROUS COMMAND DETECTED: \"+$c+\"\\n\\nBefore executing, verify ALL of:\\n1. Did the user EXPLICITLY request this exact command?\\n2. Is there a safer alternative that achieves the same goal?\\n3. Did you run blast radius on what will be affected?\\n4. Is rollback possible if this fails?\\n\\nIf ANY answer is no/unclear → STOP and confirm with user BEFORE executing. Follow CLAUDE.md anti-destructive-action rules.\")}}' ;; esac; } 2>/dev/null || true",
+            "statusMessage": "Danger scan",
+            "timeout": 5,
+            "type": "command"
+          }
+        ],
+        "matcher": "Bash"
+      },
+      {
+        "hooks": [
+          {
+            "command": "npx -y ccstatusline@latest --hook",
+            "type": "command"
+          }
+        ],
+        "matcher": "Skill"
+      },
+      {
+        "hooks": [
+          {
+            "command": "python3 \"$HOME/.claude/hooks/claude-island-state.py\"",
+            "type": "command"
+          }
+        ],
+        "matcher": "*"
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "command": "python3 \"$HOME/.claude/hooks/claude-island-state.py\"",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "command": "jq -n --arg cwd \"$PWD\" '{hookSpecificOutput:{hookEventName:\"SessionStart\",additionalContext:(\"SERENA PRE-WARM: On your first symbol query this session, call mcp__plugin_serena_serena__activate_project with path=\"+$cwd+\" BEFORE any find_symbol/find_referencing_symbols/get_symbols_overview call. This activates the project index upfront and avoids the not-activated error fallback. Skip if cwd is a non-code directory (docs/media only).\")}}'",
+            "statusMessage": "Serena pre-warm reminder",
+            "timeout": 5,
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "command": "python3 \"$HOME/.claude/hooks/claude-island-state.py\"",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "command": "python3 \"$HOME/.claude/hooks/claude-island-state.py\"",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "StopFailure": [
+      {
+        "hooks": [
+          {
+            "command": "python3 \"$HOME/.claude/hooks/claude-island-state.py\"",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "hooks": [
+          {
+            "command": "python3 \"$HOME/.claude/hooks/claude-island-state.py\"",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "command": "python3 \"$HOME/.claude/hooks/claude-island-state.py\"",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "command": "jq -n '{hookSpecificOutput:{hookEventName:\"UserPromptSubmit\",additionalContext:\"PHASE 0 — Classify before acting: [TYPE, SCOPE, STATE, RISK, DELIVERY]. Choose adaptive depth from CLAUDE.md UNIVERSAL CONTEXT-DRIVEN PROTOCOL. Do not over-engineer trivial tasks; do not under-engineer cross-module/HIGH-risk work. When classification suggests CROSS-MODULE or HIGH+ risk, run BLAST RADIUS ANALYSIS before planning.\"}}'",
+            "statusMessage": "Classification reminder",
+            "timeout": 5,
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "command": "npx -y ccstatusline@latest --hook",
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "command": "python3 \"$HOME/.claude/hooks/claude-island-state.py\"",
+            "type": "command"
+          }
+        ]
+      }
+    ]
+  },
+  "outputStyle": "Explanatory",
+  "permissions": {
+    "defaultMode": "bypassPermissions"
+  },
+  "promptSuggestionEnabled": false,
+  "respectGitignore": true,
+  "showClearContextOnPlanAccept": false,
+  "showThinkingSummaries": false,
+  "skipDangerousModePermissionPrompt": true,
+  "skipWorkflowUsageWarning": true,
+  "statusLine": {
+    "command": "npx -y ccstatusline@latest",
+    "padding": 0,
+    "type": "command"
+  }
+}

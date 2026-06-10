@@ -1,0 +1,187 @@
+{
+  "mcpServers": {
+    "MCP_DOCKER": {
+      "command": "docker",
+      "args": [
+        "mcp",
+        "gateway",
+        "run"
+      ]
+    },
+    "zai-mcp-server": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@z_ai/mcp-server"
+      ],
+      "env": {
+        "Z_AI_MODE": "ZAI",
+        "Z_AI_API_KEY": "<REPLACE_ME>"
+      }
+    },
+    "web-search-prime": {
+      "type": "http",
+      "url": "https://api.z.ai/api/mcp/web_search_prime/mcp",
+      "headers": {
+        "Authorization": "<REPLACE_ME>"
+      }
+    },
+    "web-reader": {
+      "type": "http",
+      "url": "https://api.z.ai/api/mcp/web_reader/mcp",
+      "headers": {
+        "Authorization": "<REPLACE_ME>"
+      }
+    },
+    "zread": {
+      "type": "http",
+      "url": "https://api.z.ai/api/mcp/zread/mcp",
+      "headers": {
+        "Authorization": "<REPLACE_ME>"
+      }
+    },
+    "figma": {
+      "type": "http",
+      "url": "https://mcp.figma.com/mcp"
+    },
+    "device-farm": {
+      "type": "http",
+      "url": "http://localhost:18900/mcp"
+    },
+    "semgrep": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "semgrep",
+        "mcp"
+      ],
+      "env": {}
+    },
+    "magic": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@21st-dev/magic@latest"
+      ],
+      "env": {
+        "API_KEY": "<REPLACE_ME>"
+      }
+    },
+    "aseprite-mcp-pro": {
+      "command": "node",
+      "args": [
+        "~/.claude/mcp-servers/aseprite-mcp-pro/index.mjs"
+      ]
+    },
+    "firefox-devtools": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "firefox-devtools-mcp@latest"
+      ],
+      "env": {}
+    },
+    "playwright-firefox": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest",
+        "--browser",
+        "firefox",
+        "--isolated",
+        "--caps",
+        "vision,pdf,devtools"
+      ],
+      "env": {}
+    },
+    "playwright-webkit": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest",
+        "--browser",
+        "webkit",
+        "--isolated",
+        "--caps",
+        "vision,pdf,devtools"
+      ],
+      "env": {}
+    },
+    "sequential-thinking": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "env": {}
+    },
+    "modelcontextprotocol-servers-fetch": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "mcp-server-fetch"
+      ],
+      "env": {}
+    },
+    "modelcontextprotocol-servers-time": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "mcp-server-time"
+      ],
+      "env": {}
+    },
+    "docker": {
+      "type": "stdio",
+      "command": "docker",
+      "args": [
+        "mcp",
+        "gateway",
+        "run"
+      ],
+      "env": {}
+    },
+    "shopify": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "~/code/StandUpCode/shopify-mcp/dist/index.js"
+      ],
+      "env": {
+        "SHOPIFY_CLIENT_ID": "da7daed1996916655c1fc1291170d5af",
+        "SHOPIFY_CLIENT_SECRET": "<REPLACE_ME>",
+        "MYSHOPIFY_DOMAIN": "smoothlifethailand.myshopify.com"
+      }
+    },
+    "shopify-smoothe": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "~/code/StandUpCode/shopify-mcp/dist/index.js"
+      ],
+      "env": {
+        "SHOPIFY_CLIENT_ID": "3a75b884325ffb246c1348e778f97c6d",
+        "SHOPIFY_CLIENT_SECRET": "<REPLACE_ME>",
+        "MYSHOPIFY_DOMAIN": "smooth-e-thailand.myshopify.com"
+      }
+    },
+    "shopify-dentiste": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "~/code/StandUpCode/shopify-mcp/dist/index.js"
+      ],
+      "env": {
+        "SHOPIFY_CLIENT_ID": "a3b5c4fad300d9934edf3eeb027bc09b",
+        "SHOPIFY_CLIENT_SECRET": "<REPLACE_ME>",
+        "MYSHOPIFY_DOMAIN": "dentiste-thailand.myshopify.com"
+      }
+    }
+  }
+}

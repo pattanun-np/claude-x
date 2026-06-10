@@ -1,0 +1,1916 @@
+{
+  "create_sprite": {
+    "params": [
+      {
+        "name": "color_mode",
+        "type": "string",
+        "required": false,
+        "default": "rgba"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "required": false,
+        "default": "32"
+      },
+      {
+        "name": "height",
+        "type": "number",
+        "required": false,
+        "default": "32"
+      }
+    ]
+  },
+  "open_sprite": {
+    "params": [
+      {
+        "name": "path",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  "save_sprite": {
+    "params": [
+      {
+        "name": "path",
+        "type": "string",
+        "required": false,
+        "default": "nil"
+      }
+    ]
+  },
+  "close_sprite": {
+    "params": [
+      {
+        "name": "filename",
+        "type": "string",
+        "required": false,
+        "default": "nil"
+      }
+    ]
+  },
+  "get_sprite_info": {
+    "params": []
+  },
+  "list_open_sprites": {
+    "params": []
+  },
+  "set_active_sprite": {
+    "params": [
+      {
+        "name": "filename",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  "resize_sprite": {
+    "params": [
+      {
+        "name": "width",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "height",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "method",
+        "type": "string",
+        "required": false,
+        "default": "nearest"
+      },
+      {
+        "name": "scale_content",
+        "type": "boolean",
+        "required": false,
+        "default": "true"
+      }
+    ]
+  },
+  "crop_sprite": {
+    "params": [
+      {
+        "name": "mode",
+        "type": "string",
+        "required": false,
+        "default": "content"
+      }
+    ]
+  },
+  "flatten_sprite": {
+    "params": []
+  },
+  "get_sprite_screenshot": {
+    "params": [
+      {
+        "name": "frame",
+        "type": "number",
+        "required": false,
+        "default": "nil"
+      }
+    ]
+  },
+  "set_sprite_grid": {
+    "params": [
+      {
+        "name": "grid_width",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "grid_height",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "origin_x",
+        "type": "number",
+        "required": false,
+        "default": "0"
+      },
+      {
+        "name": "origin_y",
+        "type": "number",
+        "required": false,
+        "default": "0"
+      }
+    ]
+  },
+  "get_layers": {
+    "params": []
+  },
+  "add_layer": {
+    "params": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "default": "nil"
+      },
+      {
+        "name": "type",
+        "type": "string",
+        "required": false,
+        "default": "normal"
+      }
+    ]
+  },
+  "delete_layer": {
+    "params": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  "rename_layer": {
+    "params": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "new_name",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  "set_layer_visibility": {
+    "params": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  "set_layer_opacity": {
+    "params": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "opacity",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  "set_layer_blend_mode": {
+    "params": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "blend_mode",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  "reorder_layer": {
+    "params": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "stack_index",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  "duplicate_layer": {
+    "params": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "new_name",
+        "type": "string",
+        "required": false,
+        "default": "nil"
+      }
+    ]
+  },
+  "merge_layer_down": {
+    "params": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  "get_frames": {
+    "params": []
+  },
+  "add_frame": {
+    "params": [
+      {
+        "name": "after",
+        "type": "number",
+        "required": false,
+        "default": "nil"
+      },
+      {
+        "name": "copy",
+        "type": "boolean",
+        "required": false,
+        "default": "false"
+      }
+    ]
+  },
+  "delete_frame": {
+    "params": [
+      {
+        "name": "frame",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  "set_frame_duration": {
+    "params": [
+      {
+        "name": "frame",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "duration_ms",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  "set_frame_range_duration": {
+    "params": [
+      {
+        "name": "from_frame",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "to_frame",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "duration_ms",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  "set_active_frame": {
+    "params": [
+      {
+        "name": "frame",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  "duplicate_frame": {
+    "params": [
+      {
+        "name": "frame",
+        "type": "number",
+        "required": false,
+        "default": "nil"
+      }
+    ]
+  },
+  "reverse_frames": {
+    "params": [
+      {
+        "name": "from_frame",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "to_frame",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  "get_cel": {
+    "params": [
+      {
+        "name": "layer",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "frame",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  "set_cel_position": {
+    "params": [
+      {
+        "name": "layer",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "frame",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "x",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "y",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  "set_cel_opacity": {
+    "params": [
+      {
+        "name": "layer",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "frame",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "opacity",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  "clear_cel": {
+    "params": [
+      {
+        "name": "layer",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "frame",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  "link_cels": {
+    "params": [
+      {
+        "name": "layer",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "from_frame",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "to_frame",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  "put_pixel": {
+    "params": [
+      {
+        "name": "color",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "x",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "y",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  "put_pixels": {
+    "params": []
+  },
+  "get_pixel": {
+    "params": [
+      {
+        "name": "x",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "y",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  "get_image_data": {
+    "params": [
+      {
+        "name": "format",
+        "type": "string",
+        "required": false,
+        "default": "base64_png"
+      }
+    ]
+  },
+  "set_image_data": {
+    "params": [
+      {
+        "name": "data",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "format",
+        "type": "string",
+        "required": false,
+        "default": "base64_png"
+      }
+    ]
+  },
+  "draw_line": {
+    "params": [
+      {
+        "name": "color",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "x1",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "y1",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "x2",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "y2",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "brush_size",
+        "type": "number",
+        "required": false,
+        "default": "1"
+      }
+    ]
+  },
+  "draw_rect": {
+    "params": [
+      {
+        "name": "color",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "x",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "y",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "height",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "brush_size",
+        "type": "number",
+        "required": false,
+        "default": "1"
+      },
+      {
+        "name": "filled",
+        "type": "boolean",
+        "required": false,
+        "default": "true"
+      }
+    ]
+  },
+  "draw_ellipse": {
+    "params": [
+      {
+        "name": "color",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "x",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "y",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "height",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "brush_size",
+        "type": "number",
+        "required": false,
+        "default": "1"
+      },
+      {
+        "name": "filled",
+        "type": "boolean",
+        "required": false,
+        "default": "true"
+      }
+    ]
+  },
+  "flood_fill": {
+    "params": [
+      {
+        "name": "color",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "x",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "y",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "tolerance",
+        "type": "number",
+        "required": false,
+        "default": "0"
+      },
+      {
+        "name": "contiguous",
+        "type": "boolean",
+        "required": false,
+        "default": "true"
+      }
+    ]
+  },
+  "draw_brush_stroke": {
+    "params": [
+      {
+        "name": "color",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "brush_type",
+        "type": "string",
+        "required": false,
+        "default": "circle"
+      },
+      {
+        "name": "brush_size",
+        "type": "number",
+        "required": false,
+        "default": "1"
+      }
+    ]
+  },
+  "clear_image": {
+    "params": [
+      {
+        "name": "color",
+        "type": "string",
+        "required": false,
+        "default": "nil"
+      }
+    ]
+  },
+  "replace_color": {
+    "params": [
+      {
+        "name": "from_color",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "to_color",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "scope",
+        "type": "string",
+        "required": false,
+        "default": "cel"
+      },
+      {
+        "name": "tolerance",
+        "type": "number",
+        "required": false,
+        "default": "0"
+      }
+    ]
+  },
+  "outline": {
+    "params": [
+      {
+        "name": "color",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "outside",
+        "type": "boolean",
+        "required": false,
+        "default": "true"
+      }
+    ]
+  },
+  "select_rect": {
+    "params": [
+      {
+        "name": "x",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "y",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "height",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "mode",
+        "type": "string",
+        "required": false,
+        "default": "replace"
+      }
+    ]
+  },
+  "select_ellipse": {
+    "params": [
+      {
+        "name": "x",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "y",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "height",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  "select_all": {
+    "params": []
+  },
+  "deselect": {
+    "params": []
+  },
+  "select_by_color": {
+    "params": [
+      {
+        "name": "color",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "tolerance",
+        "type": "number",
+        "required": false,
+        "default": "0"
+      }
+    ]
+  },
+  "get_selection": {
+    "params": []
+  },
+  "invert_selection": {
+    "params": []
+  },
+  "get_palette": {
+    "params": [
+      {
+        "name": "max_colors",
+        "type": "number",
+        "required": false,
+        "default": "#palette"
+      }
+    ]
+  },
+  "set_palette_color": {
+    "params": [
+      {
+        "name": "color",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "index",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  "set_palette": {
+    "params": []
+  },
+  "add_palette_color": {
+    "params": [
+      {
+        "name": "color",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  "resize_palette": {
+    "params": [
+      {
+        "name": "size",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  "load_palette": {
+    "params": [
+      {
+        "name": "path",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  "save_palette": {
+    "params": [
+      {
+        "name": "path",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  "set_fg_color": {
+    "params": [
+      {
+        "name": "color",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  "set_bg_color": {
+    "params": [
+      {
+        "name": "color",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  "generate_palette_from_sprite": {
+    "params": [
+      {
+        "name": "max_colors",
+        "type": "number",
+        "required": false,
+        "default": "256"
+      }
+    ]
+  },
+  "sort_palette": {
+    "params": [
+      {
+        "name": "sort_by",
+        "type": "string",
+        "required": false,
+        "default": "hue"
+      },
+      {
+        "name": "reverse",
+        "type": "boolean",
+        "required": false,
+        "default": "false"
+      }
+    ]
+  },
+  "import_palette_from_image": {
+    "params": [
+      {
+        "name": "path",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "max_colors",
+        "type": "number",
+        "required": false,
+        "default": "256"
+      }
+    ]
+  },
+  "get_tags": {
+    "params": []
+  },
+  "create_tag": {
+    "params": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "from_frame",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "to_frame",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "required": false,
+        "default": "nil"
+      },
+      {
+        "name": "ani_dir",
+        "type": "string",
+        "required": false,
+        "default": "nil"
+      },
+      {
+        "name": "repeat",
+        "type": "number",
+        "required": false,
+        "default": "nil"
+      }
+    ]
+  },
+  "delete_tag": {
+    "params": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  "rename_tag": {
+    "params": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "new_name",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  "set_tag_color": {
+    "params": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  "set_tag_range": {
+    "params": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "from_frame",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "to_frame",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  "get_slices": {
+    "params": []
+  },
+  "create_slice": {
+    "params": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "x",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "y",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "height",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "required": false,
+        "default": "nil"
+      }
+    ]
+  },
+  "delete_slice": {
+    "params": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  "set_slice_9patch": {
+    "params": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "center_x",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "center_y",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "center_width",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "center_height",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  "set_slice_pivot": {
+    "params": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "pivot_x",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "pivot_y",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  "create_tilemap_layer": {
+    "params": [
+      {
+        "name": "tile_width",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "tile_height",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "default": "nil"
+      }
+    ]
+  },
+  "get_tileset": {
+    "params": [
+      {
+        "name": "layer",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  "set_tile": {
+    "params": [
+      {
+        "name": "layer",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "col",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "row",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "tile_index",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "frame",
+        "type": "number",
+        "required": false,
+        "default": "nil"
+      }
+    ]
+  },
+  "get_tile": {
+    "params": [
+      {
+        "name": "layer",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "col",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "row",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "frame",
+        "type": "number",
+        "required": false,
+        "default": "nil"
+      }
+    ]
+  },
+  "get_tilemap_info": {
+    "params": [
+      {
+        "name": "layer",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "frame",
+        "type": "number",
+        "required": false,
+        "default": "nil"
+      }
+    ]
+  },
+  "export_png": {
+    "params": [
+      {
+        "name": "path",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "frame",
+        "type": "number",
+        "required": false,
+        "default": "nil"
+      }
+    ]
+  },
+  "export_sprite_sheet": {
+    "params": [
+      {
+        "name": "path",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "sheet_type",
+        "type": "string",
+        "required": false,
+        "default": "horizontal"
+      },
+      {
+        "name": "tag",
+        "type": "string",
+        "required": false,
+        "default": "nil"
+      },
+      {
+        "name": "columns",
+        "type": "number",
+        "required": false,
+        "default": "nil"
+      },
+      {
+        "name": "padding",
+        "type": "number",
+        "required": false,
+        "default": "0"
+      }
+    ]
+  },
+  "export_gif": {
+    "params": [
+      {
+        "name": "path",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "scale",
+        "type": "number",
+        "required": false,
+        "default": "1"
+      }
+    ]
+  },
+  "export_tileset": {
+    "params": [
+      {
+        "name": "layer",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "path",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  "export_layers": {
+    "params": [
+      {
+        "name": "output_dir",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "format",
+        "type": "string",
+        "required": false,
+        "default": "png"
+      },
+      {
+        "name": "visible_only",
+        "type": "boolean",
+        "required": false,
+        "default": "false"
+      }
+    ]
+  },
+  "export_tags_as_sheets": {
+    "params": [
+      {
+        "name": "output_dir",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "sheet_type",
+        "type": "string",
+        "required": false,
+        "default": "horizontal"
+      },
+      {
+        "name": "scale",
+        "type": "number",
+        "required": false,
+        "default": "1"
+      },
+      {
+        "name": "json",
+        "type": "boolean",
+        "required": false,
+        "default": "false"
+      }
+    ]
+  },
+  "export_for_godot": {
+    "params": [
+      {
+        "name": "output_dir",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "default": "nil"
+      },
+      {
+        "name": "sheet_type",
+        "type": "string",
+        "required": false,
+        "default": "horizontal"
+      },
+      {
+        "name": "scale",
+        "type": "number",
+        "required": false,
+        "default": "1"
+      },
+      {
+        "name": "trim",
+        "type": "boolean",
+        "required": false,
+        "default": "false"
+      }
+    ]
+  },
+  "export_atlas_texture": {
+    "params": [
+      {
+        "name": "output_dir",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "texture_path",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  "export_9patch_for_godot": {
+    "params": [
+      {
+        "name": "slice_name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "output_dir",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "texture_path",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  "export_tileset_for_godot": {
+    "params": [
+      {
+        "name": "layer",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "output_dir",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "tile_size",
+        "type": "number",
+        "required": false,
+        "default": "tileset.grid.tileSize.width"
+      }
+    ]
+  },
+  "get_animation_data": {
+    "params": [
+      {
+        "name": "sheet_type",
+        "type": "string",
+        "required": false,
+        "default": "horizontal"
+      },
+      {
+        "name": "columns",
+        "type": "number",
+        "required": false,
+        "default": "nil"
+      }
+    ]
+  },
+  "generate_spriteframes_tres": {
+    "params": [
+      {
+        "name": "texture_path",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "output_path",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "sheet_type",
+        "type": "string",
+        "required": false,
+        "default": "horizontal"
+      },
+      {
+        "name": "columns",
+        "type": "number",
+        "required": false,
+        "default": "nil"
+      }
+    ]
+  },
+  "sync_to_godot_project": {
+    "params": [
+      {
+        "name": "godot_project_path",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "target_dir",
+        "type": "string",
+        "required": false,
+        "default": "assets/sprites"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "default": "nil"
+      },
+      {
+        "name": "scale",
+        "type": "number",
+        "required": false,
+        "default": "1"
+      }
+    ]
+  },
+  "batch_export_for_godot": {
+    "params": [
+      {
+        "name": "godot_project_path",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "target_dir",
+        "type": "string",
+        "required": false,
+        "default": "assets/sprites"
+      },
+      {
+        "name": "scale",
+        "type": "number",
+        "required": false,
+        "default": "1"
+      }
+    ]
+  },
+  "get_color_stats": {
+    "params": [
+      {
+        "name": "scope",
+        "type": "string",
+        "required": false,
+        "default": "sprite"
+      }
+    ]
+  },
+  "compare_frames": {
+    "params": [
+      {
+        "name": "frame_a",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "frame_b",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  "compare_screenshots": {
+    "params": [
+      {
+        "name": "frame_a",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "frame_b",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  "find_unused_colors": {
+    "params": []
+  },
+  "get_sprite_bounds": {
+    "params": [
+      {
+        "name": "layer",
+        "type": "string",
+        "required": false,
+        "default": "nil"
+      },
+      {
+        "name": "frame",
+        "type": "number",
+        "required": false,
+        "default": "nil"
+      }
+    ]
+  },
+  "validate_animation": {
+    "params": []
+  },
+  "execute_script": {
+    "params": [
+      {
+        "name": "code",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  "undo": {
+    "params": [
+      {
+        "name": "steps",
+        "type": "number",
+        "required": false,
+        "default": "1"
+      }
+    ]
+  },
+  "redo": {
+    "params": [
+      {
+        "name": "steps",
+        "type": "number",
+        "required": false,
+        "default": "1"
+      }
+    ]
+  },
+  "create_character_template": {
+    "params": [
+      {
+        "name": "size",
+        "type": "number",
+        "required": false,
+        "default": "32"
+      },
+      {
+        "name": "frames",
+        "type": "number",
+        "required": false,
+        "default": "4"
+      }
+    ]
+  },
+  "create_tileset_template": {
+    "params": [
+      {
+        "name": "tile_size",
+        "type": "number",
+        "required": false,
+        "default": "16"
+      },
+      {
+        "name": "columns",
+        "type": "number",
+        "required": false,
+        "default": "8"
+      },
+      {
+        "name": "rows",
+        "type": "number",
+        "required": false,
+        "default": "8"
+      }
+    ]
+  },
+  "interpolate_frames": {
+    "params": [
+      {
+        "name": "from_frame",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "to_frame",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "steps",
+        "type": "number",
+        "required": false,
+        "default": "1"
+      }
+    ]
+  },
+  "draw_symmetry": {
+    "params": [
+      {
+        "name": "mode",
+        "type": "string",
+        "required": false,
+        "default": "horizontal"
+      },
+      {
+        "name": "axis",
+        "type": "number",
+        "required": false,
+        "default": "nil"
+      },
+      {
+        "name": "axis",
+        "type": "number",
+        "required": false,
+        "default": "nil"
+      }
+    ]
+  },
+  "generate_color_ramp": {
+    "params": [
+      {
+        "name": "base_color",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "steps",
+        "type": "number",
+        "required": false,
+        "default": "5"
+      },
+      {
+        "name": "hue_shift",
+        "type": "number",
+        "required": false,
+        "default": "0"
+      },
+      {
+        "name": "set_palette",
+        "type": "boolean",
+        "required": false,
+        "default": "false"
+      }
+    ]
+  },
+  "get_animation_preview": {
+    "params": [
+      {
+        "name": "scale",
+        "type": "number",
+        "required": false,
+        "default": "1"
+      },
+      {
+        "name": "max_frames",
+        "type": "number",
+        "required": false,
+        "default": "30"
+      }
+    ]
+  },
+  "flip_sprite": {
+    "params": [
+      {
+        "name": "direction",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "scope",
+        "type": "string",
+        "required": false,
+        "default": "sprite"
+      }
+    ]
+  },
+  "rotate_sprite": {
+    "params": [
+      {
+        "name": "angle",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  "shift_cel": {
+    "params": [
+      {
+        "name": "dx",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "dy",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "wrap",
+        "type": "boolean",
+        "required": false,
+        "default": "false"
+      }
+    ]
+  },
+  "apply_dither": {
+    "params": [
+      {
+        "name": "color_a",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "color_b",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "x",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "y",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "height",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "pattern",
+        "type": "string",
+        "required": false,
+        "default": "checker"
+      }
+    ]
+  },
+  "load_reference_image": {
+    "params": [
+      {
+        "name": "path",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "default": "Reference"
+      },
+      {
+        "name": "opacity",
+        "type": "number",
+        "required": false,
+        "default": "128"
+      }
+    ]
+  },
+  "generate_animation_player_tres": {
+    "params": [
+      {
+        "name": "texture_path",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "output_path",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "sheet_type",
+        "type": "string",
+        "required": false,
+        "default": "horizontal"
+      },
+      {
+        "name": "property_path",
+        "type": "string",
+        "required": false,
+        "default": "frame"
+      }
+    ]
+  },
+  "define_autotile_rules": {
+    "params": [
+      {
+        "name": "type",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "tile_size",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  "set_lospec_palette": {
+    "params": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  "copy_between_sprites": {
+    "params": [
+      {
+        "name": "source_filename",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "target_filename",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "source_layer",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "target_layer",
+        "type": "string",
+        "required": false,
+        "default": "nil"
+      },
+      {
+        "name": "frame",
+        "type": "number",
+        "required": false,
+        "default": "1"
+      }
+    ]
+  }
+}

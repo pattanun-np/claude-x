@@ -1,0 +1,16 @@
+{
+  "claude-plugins-official": "anthropics/claude-plugins-official",
+  "thedotmack": "thedotmack/claude-mem",
+  "ralph-marketplace": "snarktank/ralph",
+  "pm-skills": "phuryn/pm-skills",
+  "knowledge-work-plugins": "anthropics/knowledge-work-plugins",
+  "marketingskills": "coreyhaines31/marketingskills",
+  "ory": "ory/claude-plugins",
+  "ui-ux-pro-max-skill": "nextlevelbuilder/ui-ux-pro-max-skill",
+  "semgrep-marketplace": "semgrep/mcp-marketplace",
+  "openai-codex": "openai/codex-plugin-cc",
+  "visual-explainer-marketplace": "nicobailon/visual-explainer",
+  "conorluddy": "conorluddy/ios-simulator-skill",
+  "claude-code-warp": "warpdotdev/claude-code-warp",
+  "agricidaniel-claude-seo": "AgriciDaniel/claude-seo"
+}
