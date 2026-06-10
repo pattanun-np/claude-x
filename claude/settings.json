@@ -341,6 +341,16 @@
             "type": "command"
           }
         ]
+      },
+      {
+        "hooks": [
+          {
+            "command": "bash \"$HOME/.claude/hooks/warroom-report.sh\"",
+            "type": "command",
+            "async": true,
+            "timeout": 5
+          }
+        ]
       }
     ],
     "SessionStart": [
@@ -361,6 +371,16 @@
             "type": "command"
           }
         ]
+      },
+      {
+        "hooks": [
+          {
+            "command": "bash \"$HOME/.claude/hooks/warroom-report.sh\"",
+            "type": "command",
+            "async": true,
+            "timeout": 5
+          }
+        ]
       }
     ],
     "Stop": [
@@ -369,6 +389,16 @@
           {
             "command": "python3 \"$HOME/.claude/hooks/claude-island-state.py\"",
             "type": "command"
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "command": "bash \"$HOME/.claude/hooks/warroom-report.sh\"",
+            "type": "command",
+            "async": true,
+            "timeout": 5
           }
         ]
       }

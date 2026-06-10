@@ -46,6 +46,23 @@ or when testing local edits before committing).
 | `mcp/servers/aseprite-mcp-pro/` | `~/.claude/mcp-servers/` | Vendored local MCP server (deps installed via `npm ci`) |
 | `plugins/marketplaces.json` | via `claude plugin marketplace add` | 14 GitHub marketplaces |
 | shell alias `ccd` | appended to `~/.zshrc` + `~/.config/fish/config.fish` | `claude --dangerously-skip-permissions` (skipped if already defined) |
+| `claude/hooks/warroom-report.sh` | `~/.claude/hooks/` | Reports SessionStart/Stop/SessionEnd to the warroom agent's `POST /events` (JSONL). Fail-silent; no-op until a token is configured |
+
+### warroom reporting (optional)
+
+The `warroom-report.sh` hook posts each session lifecycle event to a
+[warroom](https://github.com/pattanun-np) agent (`POST /events?token=…`,
+requires agent built from warroom with the `/events` route). To activate on a
+machine:
+
+```bash
+mkdir -p ~/.config/warroom && printf '%s' "$WARROOM_AGENT_TOKEN" > ~/.config/warroom/token && chmod 600 ~/.config/warroom/token
+# optional, if the agent is not on http://127.0.0.1:8787:
+# set WARROOM_URL in your shell profile
+```
+
+Without a token the hook exits instantly — installing claude-x on a machine
+with no warroom costs nothing.
 
 ## After install (required)
 
