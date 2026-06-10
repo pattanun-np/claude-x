@@ -45,6 +45,7 @@ or when testing local edits before committing).
 | `mcp/mcp-servers.json` | merged into `~/.claude.json` | 20 MCP servers, **secrets scrubbed to `<REPLACE_ME>`** |
 | `mcp/servers/aseprite-mcp-pro/` | `~/.claude/mcp-servers/` | Vendored local MCP server (deps installed via `npm ci`) |
 | `plugins/marketplaces.json` | via `claude plugin marketplace add` | 14 GitHub marketplaces |
+| shell alias `ccd` | appended to `~/.zshrc` + `~/.config/fish/config.fish` | `claude --dangerously-skip-permissions` (skipped if already defined) |
 
 ## After install (required)
 

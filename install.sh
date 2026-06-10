@@ -115,7 +115,27 @@ else
   warn "Install Claude Code first, then re-run ./install.sh"
 fi
 
-# ── 6. Summary ───────────────────────────────────────────────────────────────
+# ── 6. Shell alias: ccd (zsh + fish, skip if already defined) ───────────────
+say "Installing shell alias: ccd -> claude --dangerously-skip-permissions"
+ALIAS_LINE='alias ccd="claude --dangerously-skip-permissions"'
+if ! grep -qs 'alias ccd=' "$HOME/.zshrc"; then
+  printf '\n# ccd - Claude Code with dangerously-skip-permissions\n%s\n' "$ALIAS_LINE" >> "$HOME/.zshrc"
+  echo "  + zsh  (~/.zshrc)"
+else
+  echo "  = zsh  (already defined)"
+fi
+FISH_CONFIG="$HOME/.config/fish/config.fish"
+if command -v fish >/dev/null; then
+  if ! grep -qs 'alias ccd' "$FISH_CONFIG"; then
+    mkdir -p "$(dirname "$FISH_CONFIG")"
+    printf '\n# ccd - Claude Code with dangerously-skip-permissions\n%s\n' "$ALIAS_LINE" >> "$FISH_CONFIG"
+    echo "  + fish (~/.config/fish/config.fish)"
+  else
+    echo "  = fish (already defined)"
+  fi
+fi
+
+# ── 7. Summary ───────────────────────────────────────────────────────────────
 say "Done."
 echo
 echo "  Installed into: $CLAUDE_DIR"
