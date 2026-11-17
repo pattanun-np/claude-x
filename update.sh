@@ -66,6 +66,9 @@ if command -v npm >/dev/null; then
   fi
 fi
 
+# ── 3b. Serena UI stays off (idempotent) ────────────────────────────────────
+python3 "$REPO_DIR/lib/serena-ui-off.py" >/dev/null
+
 # ── 4. Add-only MCP merge (existing entries / real secrets never touched) ───
 say "Merging new MCP servers (add-only)"
 python3 - "$REPO_DIR/mcp/mcp-servers.json" "$CLAUDE_JSON" <<'PY'

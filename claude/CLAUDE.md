@@ -180,6 +180,8 @@ Parallel all phases. Narration≡action. Cross-runtime portability(C10):scratchp
 §18.2 scrutinize(~/.claude/rules/scrutinize.md·ext §5.5):outsider(simpler?)·trace·verify-not-trust·sev-ord.
 §18.3 post-mortem(~/.claude/rules/post-mortem.md):4-gate(repro/cause/fix/vfy)+9-sec blameless·refuse-prereq.
 §18.4 mgmt-talk(~/.claude/rules/management-talk.md):channel(JIRA/Sl/SU/em/mtg)·keep biz-IDs·strip code-sym.
+§18.5 ux-writing(~/.claude/rules/ux-writing.md):user-language·shortest-clear·progressive·truthful-copy·enums-unchanged.
+§18.6 comment-discipline(~/.claude/rules/comment-discipline.md·ext §3.4):≤1L default(cap 2)·WHY not WHAT·compress in-region·never tool-directives.
 </disc><aA>
 ## App-A — Settings
 A.1 NEVER-set(§2.7 cl8):`DISABLE_PROMPT_CACHING*`·`DISABLE_INTERLEAVED_THINKING`·`CLAUDE_CODE_DISABLE_{ADAPTIVE_THINKING,THINKING,CLAUDE_MDS,ATTACHMENTS,FILE_CHECKPOINTING,1M_CONTEXT,EXPERIMENTAL_BETAS}`·CLI-brick `CLAUDE_CODE_INCLUDE_PARTIAL_MESSAGES=true`.

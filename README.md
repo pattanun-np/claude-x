@@ -10,6 +10,20 @@ with **one command**.
 git clone <this-repo> claude-x && cd claude-x && ./install.sh
 ```
 
+Windows (PowerShell 5.1+ or pwsh 7 — no python needed for the install itself):
+
+```powershell
+git clone <this-repo> claude-x; cd claude-x
+powershell -ExecutionPolicy Bypass -File .\install.ps1
+```
+
+`install.ps1` mirrors `install.sh`; differences: `npx` MCP entries are rewritten to
+`cmd /c npx …` (native Windows can't spawn `npx.cmd` directly), `ccd` becomes a
+function in `$PROFILE`, and it warns if `bash` / `python3` (used by hooks) are not on
+PATH — Claude Code on Windows runs hooks through Git Bash. Set `$env:CLAUDE_DIR`,
+`$env:CLAUDE_JSON`, `$env:SERENA_CONFIG` to install into a scratch location.
+There is no `update.ps1` yet — re-run `install.ps1` (it backs up first).
+
 Re-running is safe: existing files are backed up (`*.bak-<timestamp>`) and MCP
 server entries already present in `~/.claude.json` are never overwritten.
 
@@ -37,7 +51,7 @@ or when testing local edits before committing).
 | Repo path | Installs to | Contents |
 |---|---|---|
 | `claude/CLAUDE.md` | `~/.claude/CLAUDE.md` | Strict-mode constitution (global instructions) |
-| `claude/rules/` | `~/.claude/rules/` | mythos-charter, debug-mantra, scrutinize, post-mortem, management-talk |
+| `claude/rules/` | `~/.claude/rules/` | mythos-charter, debug-mantra, scrutinize, post-mortem, management-talk, comment-discipline, ux-writing |
 | `claude/agents/` | `~/.claude/agents/` | 32 local agents (verifier, 1m-*, architects, …) referenced by CLAUDE.md §11.1 |
 | `claude/hooks/` | `~/.claude/hooks/` | `claude-island-state.py` (drives all lifecycle hook events) |
 | `claude/settings.json` | `~/.claude/settings.json` | env, hooks wiring, enabledPlugins, statusLine, permissions — paths rewritten to `$HOME` |
@@ -46,23 +60,7 @@ or when testing local edits before committing).
 | `mcp/servers/aseprite-mcp-pro/` | `~/.claude/mcp-servers/` | Vendored local MCP server (deps installed via `npm ci`) |
 | `plugins/marketplaces.json` | via `claude plugin marketplace add` | 14 GitHub marketplaces |
 | shell alias `ccd` | appended to `~/.zshrc` + `~/.config/fish/config.fish` | `claude --dangerously-skip-permissions` (skipped if already defined) |
-| `claude/hooks/warroom-report.sh` | `~/.claude/hooks/` | Reports SessionStart/Stop/SessionEnd to the warroom agent's `POST /events` (JSONL). Fail-silent; no-op until a token is configured |
-
-### warroom reporting (optional)
-
-The `warroom-report.sh` hook posts each session lifecycle event to a
-[warroom](https://github.com/pattanun-np) agent (`POST /events?token=…`,
-requires agent built from warroom with the `/events` route). To activate on a
-machine:
-
-```bash
-mkdir -p ~/.config/warroom && printf '%s' "$WARROOM_AGENT_TOKEN" > ~/.config/warroom/token && chmod 600 ~/.config/warroom/token
-# optional, if the agent is not on http://127.0.0.1:8787:
-# set WARROOM_URL in your shell profile
-```
-
-Without a token the hook exits instantly — installing claude-x on a machine
-with no warroom costs nothing.
+| `lib/serena-ui-off.py` (ps1: inline) | `~/.serena/serena_config.yml` | Forces `web_dashboard`, `web_dashboard_open_on_launch`, `gui_log_window` to `false` (patches in place; creates a 3-key file if absent — Serena fills the rest with defaults). Re-applied by `update.sh` |
 
 ## After install (required)
 
@@ -83,11 +81,15 @@ with no warroom costs nothing.
 
 ## Known quirks (ported as-is)
 
-- `CLAUDE.md` ends with `@RTK.md` — that file does not exist in the source setup
-  either; the include is dangling by origin, kept for fidelity.
+- `CLAUDE.md` ends with `@RTK.md` — `~/.claude/RTK.md` does not exist in the source
+  setup either (a copy lives in a separate project); the include is dangling by
+  origin, kept for fidelity.
 - `availableModels` / `env` reference model IDs specific to the source account
-  (`claude-fable-5`, `claude-opus-4-8`, and a `claude-hiku-4-6` typo). Adjust to
-  what your account can access.
+  (`claude-opus-5-5`, `claude-sonnet-5`, …). Adjust to what your account can access.
+- The source machine's `autoMode` block (org-specific classifier rules) is not
+  shipped — this repo is public. Add your own in `~/.claude/settings.json`.
+- The `appshots-local` marketplace + `appshots-reference` plugin from the source
+  machine are omitted (local directory path, cannot resolve elsewhere).
 - `permissions.defaultMode` is `bypassPermissions` — review before installing on
   a shared machine.
 

@@ -31,7 +31,7 @@ cp    "$REPO_DIR/claude/CLAUDE.md"        "$CLAUDE_DIR/CLAUDE.md"
 mkdir -p "$CLAUDE_DIR/rules" "$CLAUDE_DIR/agents" "$CLAUDE_DIR/hooks"
 cp    "$REPO_DIR/claude/rules/"*.md       "$CLAUDE_DIR/rules/"
 cp    "$REPO_DIR/claude/agents/"*.md      "$CLAUDE_DIR/agents/"
-cp    "$REPO_DIR/claude/hooks/claude-island-state.py" "$CLAUDE_DIR/hooks/"
+cp    "$REPO_DIR/claude/hooks/"*                "$CLAUDE_DIR/hooks/"
 cp    "$REPO_DIR/claude/keybindings.json" "$CLAUDE_DIR/keybindings.json"
 cp    "$REPO_DIR/claude/settings.json"    "$CLAUDE_DIR/settings.json"
 
@@ -114,6 +114,10 @@ else
   warn "claude CLI not found — skipped marketplace/plugin install."
   warn "Install Claude Code first, then re-run ./install.sh"
 fi
+
+# ── 5b. Serena: dashboard + GUI log window off ─────────────────────────────
+say "Disabling Serena web dashboard / GUI log window"
+python3 "$REPO_DIR/lib/serena-ui-off.py"
 
 # ── 6. Shell alias: ccd (zsh + fish, skip if already defined) ───────────────
 say "Installing shell alias: ccd -> claude --dangerously-skip-permissions"
